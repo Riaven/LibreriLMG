@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Registro de Productos - Librería LMG</title>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/materialize.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body> 
+  <nav class="light orange lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Librería LMG</a>
+      
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <form method="post">
+            <div class="row ">
+
+              <br><br><br><br>
+                <div class="col s4">
+                            
+                </div>
+                     
+                <div class="col s4">
+                  <div class ='row center'><h3>Bienvenido</h3></div>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                </div>
+            </div>
+        
+        
+       
+        
+        <br>
+
+        <div class="row center">
+
+                <button class="btn waves-effect waves-light center" type="submit" name="action">Entrar</button>
+    
+            </div>
+    </form>
+  </div>
+  <br><br><br>
+  <footer class="page-footer orange">
+    <div class="footer-copyright">
+      <div class="container">
+       <a class="orange-text text-lighten-3" href="">Librería LMG</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="% static 'js/materialize.js' %"></script>
+  <script src="% static 'js/init.js' %"></script>
+
+  </body>
+</html>

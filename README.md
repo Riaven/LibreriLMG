@@ -1,2 +1,2 @@
-# LibreriLMG
-Versión trabajo librería LMG
+# TrabajoLibreria
+Archivos trabajo librería
