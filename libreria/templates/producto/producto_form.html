@@ -39,9 +39,7 @@
                      
                 <div class="col s4">
                         {% csrf_token %}
-                        {{ form.nombre|materializecss }}
-                        {{ form.tipo|materializecss }}
-                        {{ form.descripcion|materializecss }}
+                        {{ form.as_p }}
                         
 
                 </div>
