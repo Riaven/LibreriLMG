@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.producto',
     'apps.accounts',
     'materializecssform',
+    'apps.sendemail',
     
 ]
 

@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.urls import path
 from django.contrib.auth import login
-from apps.accounts.views import user_list, deshabilitar_user, mail
+from apps.accounts.views import user_list, deshabilitar_user
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,5 +26,6 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^userlist/', user_list, name='user_listar'),
     url(r'^user_disable/(?P<username>\d+)/$', deshabilitar_user, name='disable_user'),
-    url(r'^send/', mail, name='enviar'),
+    
+    url(r'^send/', include (('apps.sendemail.urls', 'sendemail'), namespace = "email")),
 ]
