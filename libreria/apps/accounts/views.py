@@ -19,9 +19,9 @@ def deshabilitar_user(request, username):
     return redirect('index')
 
 
-def mail(request, mensaje):
+def mail(request):
     send_mail('Solicitud de despacho',
-    mensaje,
+    'cuaderno alquimia, hojas oficio',
     'librerialmg@gmail.com',
     ['joc.gutierrezl@alumnos.duoc.cl'],
     fail_silently=False)
